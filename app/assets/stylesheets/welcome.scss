@@ -5,18 +5,16 @@ body {
 h1 {
 	font-family: 'Montserrat', sans-serif;
 	text-align: left;
-	display: inline-block;
 	font-size: 86px;
-	margin: 0.67em 0;
 	font-weight: bold;
-
 }
 p {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 22px;
+	font-family: 'Lato';
+	font-size: 40px;
 }
 a {
 	color: black;
+	text-decoration: none;
 }
 a:hover{
 	text-decoration: none;
@@ -25,6 +23,11 @@ a:hover{
 button {
 	padding: .5em 1em;
 	border-radius: 5px;
-	border: 1px solid #999;
-
+	border: .5px solid #999;
+	text-align: center;
+	font-family: 'Lato';
+	font-size: 20px;
+}
+.container {
+	padding: 20px 30px 0px 30px;
 }
