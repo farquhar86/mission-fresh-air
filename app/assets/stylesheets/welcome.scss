@@ -1,17 +1,39 @@
-body {
-	background: url(http://1.bp.blogspot.com/-Nbk89BSOp3g/ULotZE8_7KI/AAAAAAAAA1M/9xhubU1eePs/s1600/4.jpg) no-repeat;
-	background-size: cover;
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: url('http://photoblog.statesman.com/wp-content/uploads/2012/08/rbz-mason-jars-01.jpg');
+  height: 800px;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 500px;
 }
 h1 {
 	font-family: 'Montserrat', sans-serif;
 	text-align: left;
+	color: white;
 	font-size: 86px;
-	font-weight: bold;
 }
 p {
 	font-family: 'Open Sans';
 	font-size: 36px;
-	color: black;
+	color: white;
 }
 a {
 	color: black;
@@ -26,13 +48,10 @@ button {
 	border-radius: 5px;
 	border: .5px solid #999;
 	text-align: center;
-	font-family: 'Lato';
+    font-family: 'Open Sans';
 	font-size: 20px;
 	background-color: white;
 }
-.container {
-	padding: 250px 30px 0px 30px;
-}
-.header-content {
-
+.black-font {
+	color: black;
 }
