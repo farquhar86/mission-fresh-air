@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
   root to: "welcome#index"
 
   get '/welcome/checkout', to: "welcome#checkout"
@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :charges
 
   resources :purchases, only: [:show]
-
 
 end
 
