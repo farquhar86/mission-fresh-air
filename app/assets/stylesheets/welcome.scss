@@ -1,86 +1,119 @@
 header {
- text-align: center;
- color: white;
- font-family:"Raleway";
- background: url(http://photoblog.statesman.com/wp-content/uploads/2012/08/rbz-mason-jars-01.jpg);
- background-size: cover;
- font-size: 90px;
- font-family: "Raleway", sans-serif;
- padding: 50px 100px 60px 100px;
+  padding-top: 70px;
+  background-size: cover;
 }
+
+h1 {
+  font-size: 110px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-top: 18px;
+}
+
 h2 {
- font-size: 90px;
- color: black;
- text-align: center;
- font-family: "Raleway", sans-serif;
- padding: 50px 100px 60px 100px;
+  font-size: 24px;
+  font-family: "Raleway";
+  font-weight: 300;
 }
-form {
-  color: black;
-  font-size: 30px;
+
+img {
+  padding: -40px 0px 0px 0px;
+  height: 610px;
 }
+
 p {
-  font-family: "Raleway", sans-serif;
-  color: black;
-  font-size: 32px;
-  text-align: left;
-  padding-left: 100px;
-  padding-right: 100px;
+  font-size: 24px;
+  font-family: "Raleway";
+  font-weight: 300;
 }
-li {
-  font-size: 35px;
+
+a {
+  color: #663399;
 }
-input {
-   margin-top: 19px;
+
+a:hover {
+  text-decoration: none;
 }
-.white-font {
-  color: white;
+
+hr {
+    max-width: 50px;
+    border-color: #663399;
+    border-width: 3px;
 }
-.pink {
-  color: #F64747;
+
+section {
+    padding: 100px 0;
 }
-.black-font {
-  color: black;
-}
-.center {
+
+.arrow {
   text-align: center;
+  font-size: 150px;
 }
-.navbar-brand {
-  line-height: 70px;
-  height: 50px;
-  padding-top: 0;
-  font-size: 32px;
-  color: black;
-  font-family: "Raleway";
-  padding-left: 40px;
+
+.no-padding {
+    padding: 0;
 }
-.navbar-nav li a {
-  line-height: 70px;
-  height: 70px;
-  padding-top: 0;
-  font-size: 32px;
-  color: black;
-  font-family: "Raleway";
-  padding-right: 40px;
+
+.portfolio-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
 }
-.impact {
-  font-family: "Montserrat";
+
+.portfolio-box .portfolio-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    background: #663399;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
 }
-.shadow {
-  text-shadow: -3px 0 black, 0 4px black, 3px 0 black, 0 -3px black;
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
 }
-#left-align {
-  text-align: left;
-  padding-left: 40px;
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
-#pink-btn {
-  background-color: #F64747;
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
 }
-#black-btn {
-  background-color: black;
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
 }
-.font-lg {
-  font-size: 170px;
-  padding-left: 200px;
-  padding-right: 200px;
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+@media(min-width:768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+.no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
 }
