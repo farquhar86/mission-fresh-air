@@ -1,4 +1,68 @@
-<h1>Welcome#index</h1>
-<p>Our goal: to provide you with the freshest air anywhere</p>
-
-<%=link_to "Place Order", welcome_checkout_path %> 
+<header class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-7">
+        <h1>Mission<br>Fresh Air</h1><br>
+        <p>Our mission is to bring pure Alaskan air to everyone on this beautiful Earth. Let's show the world what fresh air should taste like!<br><br>A portion of all proceeds go to support grassroots community programs that are cleaning our air.<br><br>
+        <button type="button" class="font-size btn btn-default btn-lg buttton"><%=link_to "Place Order", checkout_path %></button>
+      </div>
+    </div>
+    <div class="arrow text-center">&#x25BE;</div>
+  </div>
+</header>
+<section class="no-padding" id="portfolio">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-4 col-sm-6">
+        <a href="http://www.lung.org/" class="portfolio-box">
+          <img src="http://i.imgur.com/Fe3NGy0.jpg?1" class="img-responsive" alt="">
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-name">
+                American Lung Association
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    <div class="col-lg-4 col-sm-6">
+      <a href="http://www.ccair.org/" class="portfolio-box">
+        <img src="http://i.imgur.com/Zx1NI7p.jpg?2" class="img-responsive" alt="">
+        <div class="portfolio-box-caption">
+          <div class="portfolio-box-caption-content">
+            <div class="project-name">
+              Coalition for Clean Air
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <a href="http://medicaladvocatesforhealthyair.org/" class="portfolio-box">
+          <img src="http://i.imgur.com/rZ1W5KH.jpg?1" class="img-responsive" alt="">
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-name">
+                Medical Advocates for Healthy Air
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Come change the world with us!</h2>
+        <hr>
+        <p>Seriously, we like you. Send us an email and we will get back to you within 24 hours.</p>
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <p><a href="mailto:your-email@your-domain.com">contactmissionfreshair@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>

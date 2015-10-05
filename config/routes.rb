@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'superusers/show'
-
   root to: "welcome#index"
 
-  get '/welcome/checkout', to: "welcome#checkout"
+  get '/checkout', to: "welcome#checkout"
 
   get "/superusers/:id", to: "superusers#show"
 
