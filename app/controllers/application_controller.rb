@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   include SessionsHelper
+
+  def require_login
+  	if !current_superuser
+  		redirect_to root_path
+  	end
+  end
 end
