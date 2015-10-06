@@ -53,9 +53,32 @@ a {
   color: black;
 }
 
+button {
+  position: fixed;
+  top: 30px;
+  right: 60px;
+}
+
+section#pitch {
+  padding: 50px;
+}
+
+section#contact {
+  padding: 50px;
+}
+
+iframe {
+  height: 480px;
+  width: 800px;
+}
+
 .arrow {
   text-align: center;
   font-size: 150px;
+}
+
+.white {
+  color: white;
 }
 
 .no-padding {
