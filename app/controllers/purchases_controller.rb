@@ -28,7 +28,7 @@ class PurchasesController < ApplicationController
 
     @purchase.save
    
-    render 'confirm_booking'
+    redirect_to @purchase
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
