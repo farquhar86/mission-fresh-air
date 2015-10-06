@@ -28,11 +28,12 @@ class PurchasesController < ApplicationController
 
     @purchase.save
    
-    render 'confirm_booking'
+    
+    redirect_to @purchase
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to @purchase
+    redirect_to root_path
   end
 
   def show
