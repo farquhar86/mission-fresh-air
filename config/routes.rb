@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
 
-  get '/checkout', to: "welcome#checkout"
+  get 'purchases/new', to: "purchases#new"
 
   get "/superusers/:id", to: "superusers#show"
 
@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
   resources :charges
 
-  resources :purchases, only: [:show]
+
+  resources :purchases
 
 end
 #     Prefix Verb   URI Pattern                 Controller#Action
