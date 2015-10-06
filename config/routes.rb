@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   post "/sessions", to: "sessions#create"
 
-  get "/sign_out", to: "sessions#destroy" 
+  post "/sign_out", to: "sessions#destroy" 
 
   resources :charges
 
