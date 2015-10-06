@@ -2,61 +2,9 @@
 <p>We made it superusers/show</p>
 <%= button_to "Log Out", "/sign_out" %>
 
-<!DOCTYPE html>
-<html lang="en">
+
 ​
-<head>
- <!-- Bootstrap Core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-​
-    <!-- Custom CSS -->
-    <link href="/static/css/main.css" rel="stylesheet">
-​
-    <!-- Custom Fonts -->
-    <link href="/static/javascript/bootstrap.js">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <script src="/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/vendor/underscore/underscore-min.js"></script>
-    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <script src="/static/javascript/app.js"></script>
-    <script src="/static/javascript/templating.js"></script>
-    <script src="/static/javascript/sb-admin-2.js"></script>
-    <link href="/static/css/landing-page.css" rel="stylesheet">
-    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
-    <link href="/static/css/timeline.css" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-​
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
-​
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-​
-    <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-​
-    <!-- Timeline CSS -->
-    <link href="../dist/css/timeline.css" rel="stylesheet">
-​
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-​
-    <!-- Morris Charts CSS -->
-    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
-​
-    <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-​
-​
-</head>
-​
-<body>
+
 <div class="container">
     <div id="wrapper">
             <div class="row">
@@ -76,7 +24,7 @@
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div id="numberReceivers" class="huge"></div>
-                                    <div>Current Donors</div>
+                                    <div>All Orders <%= @purchases.length %></div>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +46,7 @@
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div id="numberDonors" class="huge"></div>
-                                    <div>Current Receivers</div>
+                                    <div>Orders that still need shipped</div>
                                 </div>
                             </div>
                         </div>
@@ -119,8 +67,7 @@
                                     <i class="fa fa-shopping-cart fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">8</div>
-                                    <div>Meals Donated!</div>
+                                    <div>what to put here?</div>
                                 </div>
                             </div>
                         </div>
@@ -141,8 +88,7 @@
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">1</div>
-                                    <div>Meals Picked Up</div>
+                                    <div>What here?</div>
                                 </div>
                             </div>
                         </div>
@@ -221,20 +167,35 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
+                                                    <th>Email</th>
                                                     <th>Date</th>
-                                                    <th>Time</th>
                                                     <th>Amount</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Street</th>
+                                                    <th>City</th>
+                                                    <th>State</th>
+                                                    <th>Country</th>
+                                                    <th>Zip</th>
                                                 </tr>
                                             </thead>
-                                            <%= form_for @purcheses, :html => {:class => "loginForm"} do |f| %>
                                             <tbody>
+                                                <% @purchases.each do |g| %>
                                                 <tr>
-                                                    <td>3326</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:29 PM</td>
-                                                    <td>$321.33</td>
+                                                    <td><%= g.id %></td>
+                                                    <td><%= g.email %></td>
+                                                    <td><%= g.created_at %></td>
+                                                    <td><%= g.amount %></td>
+                                                    <td><%= g.first_name %></td>
+                                                    <td><%= g.last_name %></td>
+                                                    <td><%= g.address %></td>
+                                                    <td><%= g.city %></td>
+                                                    <td><%= g.state %></td>
+                                                    <td><%= g.country %></td>
+                                                    <td><%= g.zip %></td>
+                                                    
                                                 </tr>
-                                                
+                                                <%end%>
                                             </tbody>
                                         </table>
                                     </div>
@@ -268,6 +229,3 @@
 </div>
         
  
-</body>
-​
-</html>
