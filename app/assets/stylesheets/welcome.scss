@@ -8,8 +8,15 @@ header {
   background-size: cover;
 }
 
-h1 {
+h1#home {
   font-size: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding: 45px 0px 0px 0px;
+}
+
+h1#checkout {
+  font-size: 50px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   padding: 45px 0px 0px 0px;
@@ -27,10 +34,6 @@ p {
   font-weight: 300;
 }
 
-a {
-  color: #67809F;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -46,9 +49,36 @@ section {
     padding: 100px 0;
 }
 
+a {
+  color: black;
+}
+
+button {
+  position: fixed;
+  top: 30px;
+  right: 60px;
+}
+
+section#pitch {
+  padding: 50px;
+}
+
+section#contact {
+  padding: 50px;
+}
+
+iframe {
+  height: 480px;
+  width: 800px;
+}
+
 .arrow {
   text-align: center;
   font-size: 150px;
+}
+
+.white {
+  color: white;
 }
 
 .no-padding {
