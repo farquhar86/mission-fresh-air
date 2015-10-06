@@ -1,2 +1,12 @@
 <p>This is your purchase</p>
-<p>Your purchase is <%= @purchase.inspect %></p>
+id: <%= @purchase.id %><br>
+Name<br>
+<%= @purchase.first_name %><br>
+<%= @purchase.last_name %><br>
+<br>
+Shipping address:<br>
+<%= @purchase.address %><br>
+<%= @purchase.city %><br>
+<%= @purchase.state %><br>
+<%= @purchase.country %><br>
+<%= @purchase.zip %><br>

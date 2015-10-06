@@ -1,0 +1,83 @@
+
+<%= form_for @purchase, html: {id: :new_purchase} do |f| %>
+    <% if @purchase.errors.any? %>
+        
+        <h2><%= pluralize(@purchase.errors.count, "error") %> prohibited this purchase from being saved:</h2>
+
+        <ul>
+        <% @purchase.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+        
+      <% end %>
+    <%= javascript_include_tag "https://js.stripe.com/v2/" %>
+      <script>
+        Stripe.setPublishableKey('pk_test_JchvLjqLiR0hMZxCoimb9NzC');
+      </script>
+ <div class="container">     
+   <div class="billing row">
+          <div class="title row">
+            <div class="col-sm-12">
+              <h2>Billing Details</h2>
+            </div>
+          </div>
+          <div class="company row">
+            <div class="col-sm-8">
+                <%= f.text_field :first_name, class: "form-control", placeholder: 'First Name', autofocus: true, required: true %>
+            </div>
+          </div>
+          <div class="company row">
+            <div class="col-sm-8">
+                <%= f.text_field :last_name, class: "form-control", placeholder: 'Last Name', autofocus: true, required: true %>
+            </div>
+          </div>
+          <div class="company row">
+            <div class="col-sm-8">
+                <%= f.email_field :email, "data-stripe" => "email", class: "form-control", placeholder: 'Email', autofocus: true, required: true %>
+            </div>
+          </div>
+          <div class="telephone row">
+            <div class="col-sm-8">
+              <%= f.phone_field :telephone, class: "form-control", placeholder: 'Phone Number', autofocus: true, required: true %>
+            </div>
+          </div>
+          <div class="address_1 row">
+            <div class="col-sm-8">
+              <%= f.text_field :address, "data-stripe" => "address_line", class: "form-control", placeholder: 'Address 1', autofocus: true, required: true %>
+            </div>
+          </div>
+          <div class="authentication row">
+            <div class="col-sm-5">
+              <%= f.text_field :city, "data-stripe" => "address_city", class: "form-control", placeholder: 'City', autofocus: true, required: true %>
+            </div>
+            <div class="col-sm-3">
+              <%= f.text_field :state, "data-stripe" => "address_state", class: "form-control", placeholder: 'State/Province', autofocus: true, required: true %>
+            </div>
+          </div>
+          <div class="authentication row">
+            <div class="col-sm-3">
+              <%= f.text_field :zip, "data-stripe" => "address_zip", class: "form-control", placeholder: 'Zip Code', autofocus: true, required: true %>
+            </div>
+            <div class="col-sm-5">
+              <%= f.text_field :country, "data-stripe" => "address_country", class: "form-control", placeholder: 'Country', autofocus: true, required: true %>
+            </div>
+          </div>
+        </div> <!-- Billing -->
+          
+    <%= text_field_tag :card_number, nil, class: "form-control", "data-stripe" => "number", placeholder: '16 digit card number', autofocus: true, required: true %>
+ 
+
+    <%= select_tag :exp_month, options_for_select(Date::MONTHNAMES.compact.each_with_index.map { |name,i| ["#{i+1} - #{name}", i+1] }), include_blank: false, "data-stripe" => "exp-month", class: "form-control left", autofocus: true, required: true %>
+      
+        <%= select_tag :exp_year, options_for_select((Date.today.year..(Date.today.year+10)).to_a), include_blank: false, "data-stripe" => "exp-year", class: "form-control", autofocus: true, required: true %>
+    
+        <%= text_field_tag :card_verification, nil, class: "form-control", "data-stripe" => "cvc", placeholder: 'CVC', autofocus: true, required: true %>
+
+        
+  
+    <%= f.submit "Request to Book", class: "btn btn-lg", id: "book-btn", type: "submit" do %>
+              
+    <% end %>
+<% end %>
+</div>
