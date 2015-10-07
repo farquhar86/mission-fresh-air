@@ -41,6 +41,10 @@
       <h2>Proceeds go to local clean air initiatives. </h2>
     </div> 
     <hr> 
+    <% if flash[:error] %>
+      <div class="error"><%= flash[:error] %></div>
+    <% end %>
+    <hr>
       <div class="row">
           <div class="title row text-center">
             <div class="col-sm-12">
