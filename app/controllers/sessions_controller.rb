@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   		login(@superuser)
   		redirect_to "/superusers/:id" 
   	else
-  		redirect_to superuser_path
+  		redirect_to superusers_path
   	end
   end
 
