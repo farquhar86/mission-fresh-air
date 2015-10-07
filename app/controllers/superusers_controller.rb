@@ -7,4 +7,8 @@ class SuperusersController < ApplicationController
   	@purchases = Purchase.all.order(created_at: :desc)
 
   end
+
+  
+	
+
 end

@@ -173,19 +173,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <% @purchases.each do |g| %>
+                                                <% @purchases.each do |purchase| %>
                                                 <tr>
-                                                    <td><%= g.shipped %></td>
-                                                    <td><%= g.id %></td>
-                                                    <td><%= g.email %></td>
-                                                    <td><%= g.created_at%></td>
-                                                    <td><%= g.amount %></td>
-                                                    <td><%= g.first_name %> <%= g.last_name %></td>
-                                                    <td><%= g.address %></td>
-                                                    <td><%= g.city %></td>
-                                                    <td><%= g.state %></td>
-                                                    <td><%= g.country %></td>
-                                                    <td><%= g.zip %></td>
+                                                    <td> <%= form_tag '/purchases', shipped: true, method: :patch do %>
+                                                        <%= hidden_field_tag 'purchase_id', purchase.id %>
+                                                        <%= submit_tag "Ship", class: "shipped" %>
+                                                        <%end%>
+                                                        <%= purchase.shipped %></td>
+                                                    <td><%= purchase.id %></td>
+                                                    <td><%= purchase.email %></td>
+                                                    <td><%= purchase.created_at%></td>
+                                                    <td><%= purchase.amount %></td>
+                                                    <td><%= purchase.first_name %> <%= purchase.last_name %></td>
+                                                    <td><%= purchase.address %></td>
+                                                    <td><%= purchase.city %></td>
+                                                    <td><%= purchase.state %></td>
+                                                    <td><%= purchase.country %></td>
+                                                    <td><%= purchase.zip %></td>
                                                     
                                                 </tr>
                                                 <%end%>
