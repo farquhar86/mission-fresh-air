@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post "/sign_out", to: "sessions#destroy" 
 
+  patch "/purchases", to: "purchases#edit"
+
   resources :charges
 
 

@@ -42,10 +42,21 @@ class PurchasesController < ApplicationController
   def show
     @purchase = Purchase.find(params[:id])
   end
+
+  def edit
+    purchase = Purchase.find(params[:purchase_id])
+    purchase.update_attribute(:shipped, DateTime.now)
+    redirect_to "/superusers/:id"
+  end
+  
+
+
   def to_param
    uuid
   end
+ 
  private
+
   	def purchase_params
       
       params.require(:purchase).permit(:first_name, :last_name, :address, :city, :state, :country, :zip, :telephone, :email, :card_token)
