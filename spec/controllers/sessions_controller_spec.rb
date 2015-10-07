@@ -8,6 +8,22 @@ RSpec.describe SessionsController, type: :controller do
 			expect(response).to be_success
 		end
 	end
+
+	describe "#create" do
+		context 'valid params' do
+			before do
+				post :create, superuser: {
+					email: 'email@admin.com', password_digest: '38299efu0fjhgfadhf9023fd'
+				} 
+			end
+
+			it 'assigns @superuser' do
+				expect(assigns(:superuser)).to be_a Superuser
+			end
+		end
+
+	end
+
 end
 
 
