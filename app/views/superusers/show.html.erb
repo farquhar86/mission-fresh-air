@@ -174,10 +174,12 @@
                                             </thead>
                                             <tbody>
                                                 <% @purchases.each do |purchase| %>
-                                                <tr>
-                                                    <td> <%= form_tag '/purchases', shipped: true, method: :patch do %>
+                                                <tr>                                             
+                                                    <td> <%= form_tag '/purchases', shipped: true, method: :patch do %> 
                                                         <%= hidden_field_tag 'purchase_id', purchase.id %>
-                                                        <%= submit_tag "Ship", class: "shipped" %>
+                                                            <% if purchase.shipped == nil %>
+                                                                <%= submit_tag "Ship", class: "shipped" %>
+                                                            <%end%>
                                                         <%end%>
                                                         <%= purchase.shipped %></td>
                                                     <td><%= purchase.id %></td>
