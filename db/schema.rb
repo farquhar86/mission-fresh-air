@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006185930) do
+ActiveRecord::Schema.define(version: 20151007003111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20151006185930) do
     t.string   "address"
     t.string   "telephone"
     t.string   "card_token"
+    t.datetime "shipped"
   end
 
   create_table "superusers", force: :cascade do |t|
