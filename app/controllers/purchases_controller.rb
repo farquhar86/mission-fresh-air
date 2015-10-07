@@ -13,7 +13,7 @@ class PurchasesController < ApplicationController
 
   # end
   def create
-    new_params = {amount: 2200}.merge(purchase_params)
+    new_params = {amount: 22}.merge(purchase_params)
     # new_params = purchase_params
     # new_params[:amount] = 1500
     @purchase = Purchase.create new_params
@@ -27,7 +27,7 @@ class PurchasesController < ApplicationController
       amount: 2200,
       description: 'Mission Fresh Air',
       currency: 'usd',
-	  source: params[:purchase][:card_token]
+    source: params[:purchase][:card_token]
     )
 
     @purchase.save

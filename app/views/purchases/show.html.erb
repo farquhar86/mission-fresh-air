@@ -1,12 +1,15 @@
-<p>This is your purchase</p>
-id: <%= @purchase.id %><br>
-Name<br>
-<%= @purchase.first_name %><br>
-<%= @purchase.last_name %><br>
-<br>
-Shipping address:<br>
-<%= @purchase.address %><br>
-<%= @purchase.city %><br>
-<%= @purchase.state %><br>
-<%= @purchase.country %><br>
-<%= @purchase.zip %><br>
+
+
+<div class="container">
+	<div class="row text-center">
+		<bold><h2><%= @purchase.first_name.capitalize %> you just bought air! And we thank you for that!</h2></bold>
+		<br>
+		<hr>
+		<h2>Become an Air Ambassador and share your air buying experience with your friends.</h2>
+	</div>
+</div>
+	<br>
+	<div class="col-sm-12 img-responsive" align="middle">
+	<div id="fb-root" class='img-responsive'></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-post img-responsive" data-href="https://www.facebook.com/freshairmission/posts/112626382426027" data-width="500"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/freshairmission/posts/112626382426027"><p>I just bought Air!www.missionfreshair.com</p>Posted by <a href="https://www.facebook.com/freshairmission">Mission Fresh Air</a> on&nbsp;<a href="https://www.facebook.com/freshairmission/posts/112626382426027">Wednesday, October 7, 2015</a></blockquote></div></div>
+			<img src="http://ace.imageg.net/graphics/product_images/pACE3-957285enh-z8.jpg" height="400" width="400" class="img-responsive">
+	</div>
