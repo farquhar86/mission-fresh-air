@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :superuserslugs
   root to: "welcome#index"
 
   get 'purchases/new', to: "purchases#new"
