@@ -13,14 +13,18 @@ class PurchasesController < ApplicationController
 
   # end
   def create
-    @purchase = Purchase.create purchase_params
+    new_params = {amount: 2200}.merge(purchase_params)
+    # new_params = purchase_params
+    # new_params[:amount] = 1500
+    @purchase = Purchase.create new_params
+    
 
  
 
     raise "Please, check booking errors" unless @purchase.valid?
 
     Stripe::Charge.create(
-      amount: 1500,
+      amount: 2200,
       description: 'Mission Fresh Air',
       currency: 'usd',
 	  source: params[:purchase][:card_token]
@@ -38,8 +42,12 @@ class PurchasesController < ApplicationController
   def show
     @purchase = Purchase.find(params[:id])
   end
+  def to_param
+   uuid
+  end
  private
   	def purchase_params
+      
       params.require(:purchase).permit(:first_name, :last_name, :address, :city, :state, :country, :zip, :telephone, :email, :card_token)
     end
     def stripe_params
