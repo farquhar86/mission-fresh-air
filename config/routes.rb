@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
 
-  get 'purchases/new', to: "purchases#new"
+  get '/purchases', to: "purchases#index"
+
+  get '/purchases/new', to: "purchases#new"
 
   get "/superusers/:id", to: "superusers#show"
 
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
 
   post "/sign_out", to: "sessions#destroy" 
 
-  patch "/purchases", to: "purchases#edit"
+  patch "/purchases/edit", to: "purchases#edit"
 
   resources :charges
 

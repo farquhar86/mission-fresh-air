@@ -1,4 +1,15 @@
 class PurchasesController < ApplicationController
+  
+  before_action :require_login, only: [:index]
+
+  def index
+    
+    @superuser = Superuser.find(1)
+    @purchases = Purchase.all.order(created_at: :desc)
+    @shippedOut = Purchase.all.order(shipped: :desc)
+
+  end
+
   def new
     @purchase = Purchase.new
   end
