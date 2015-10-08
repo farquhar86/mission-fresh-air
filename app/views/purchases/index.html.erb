@@ -148,7 +148,7 @@
                                     <tbody>
                                         <% @purchases.each do |purchase| %>
                                         <tr>                                             
-                                            <td> <%= form_tag '/purchases/edit', shipped: true, method: :patch do %> 
+                                            <td> <%= form_tag update_purchase_path(purchase), method: :patch do %> 
                                                 <%= hidden_field_tag 'purchase_id', purchase.id %>
                                                     <% if purchase.shipped == nil %>
                                                         <%= submit_tag "Ship", class: "shipped" %>
@@ -184,11 +184,6 @@
                 <!-- /.panel-body -->
             </div>
             <!-- /.panel -->
-            
-       
-            
-                <!-- /.panel-body -->
-              
                 <!-- /.panel-footer -->
             </div>
             <!-- /.panel .chat-panel -->

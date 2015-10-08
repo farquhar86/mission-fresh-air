@@ -9,9 +9,9 @@ class SessionsController < ApplicationController
 
   	if @superuser
   		login(@superuser)
-  		redirect_to "/superusers/:id" 
+  		redirect_to "/purchases" 
   	else
-  		redirect_to superusers_path
+  		redirect_to "/login"
   	end
   end
 

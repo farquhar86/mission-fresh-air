@@ -30,10 +30,10 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.find(params[:id])
   end
 
-  def edit
-    purchase = Purchase.find(params[:purchase_id])
+  def update
+    purchase = Purchase.find(params[:id])
     purchase.update_attribute(:shipped, DateTime.now)
-    redirect_to "/superusers/:id"
+    redirect_to "/purchases"
   end
  
  private

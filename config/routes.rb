@@ -1,26 +1,29 @@
 Rails.application.routes.draw do
 
-  resources :superuserslugs
+  # resources :superuserslugs
   root to: "welcome#index"
 
   get '/purchases', to: "purchases#index"
 
-  get '/purchases/new', to: "purchases#new"
+  get '/purchases/new', to: "purchases#new" # new purchase form
+  get '/purchases/:id/edit', to: "purchases#edit" # edit a purchase form
 
-  get "/superusers/:id", to: "superusers#show"
+  get '/purchases/:id', to: "purchases#show", as: "purchase"
 
-  get "/superusers", to: "sessions#new"
+  get "/login", to: "sessions#new"
 
   post "/sessions", to: "sessions#create"
 
   post "/sign_out", to: "sessions#destroy" 
 
-  patch "/purchases/edit", to: "purchases#edit"
+  post "/purchases", to: "purchases#create"
 
-  resources :charges
+  patch "/purchases/:id", to: "purchases#update", as: "update_purchase" # submit my edits
+
+  # resources :charges
 
 
-  resources :purchases
+  # resources :purchases
 
 end
 #     Prefix Verb   URI Pattern                 Controller#Action
