@@ -1,29 +1,44 @@
-<script type="text/javascript" src="http://webplayer.yahooapis.com/player.js"> </script>
-<script type="text/javascript" src="assets/jquery.min.js"></script>
 <header class="background">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li>
+                      <%= link_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg button" %>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
   <div class="container">
-  <%= button_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg button", :method => :get %>
+ 
+  
     <div class="row">
       <div class="col-lg-8 col-lg-7">
-        <h1 id="home">Mission<br>Fresh Air</h1><br>
+        <h1 id="home">Alaskan<br>Air Delevered</h1><br>
         <!-- <p>Our mission is to bring pure Alaskan air to everyone on this beautiful Earth. Let's show the world what fresh air should taste like!<br><br>A portion of all proceeds go to support grassroots community programs that are cleaning our air.<br><br> -->
       </div>
     </div>
     <div class="arrow text-center">&#x25BE;</div>
   </div>
 </header>
-
     <div class="content-section-b">
-
         <div class="container">
-
             <div class="row">
-
                 <div class="col-sm-12 text-center" >
-                    
+
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Our Mission</h2>
-                    <p class="lead"> There are thousands of people acorss the United States that haven't breathed fresh air in their lives. Its our mission to send these people a mason jar full of fresh Alaskan air while donating all the proceeds to charities to help clear our air.</p>
+                    <h2 class="section-heading">Mission Fresh Air</h2>
+                    <p class="lead"> Its our mission to send people across the United States that never tasted fresh air before a mason jar full of fresh Alaskan air, while donating all the proceeds to clean air initiatives.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="" alt="">
@@ -43,12 +58,9 @@
 
 
 
-
-         <a href="https://youtube.com/embed/Dcr_ZDVbBSQ?&controls=0&showinfo=0&autohide=1&rel=1&start=4" id="bgndVideo" class="player" data-property= "{videoURL:'7SnmCUwOsts',containment:'body', showControls:true, autoPlay:true, loop:false, vol:50, mute:true, startAt:10, opacity:1, addRaster:false, quality:'default'}" >
-          background video
-         </a>
-         
-        
+<div class="videoWrapper">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/Dcr_ZDVbBSQ" frameborder="0" allowfullscreen></iframe>
+        </div>
         
       </div>
     </div>
@@ -120,22 +132,20 @@
 
         </div>
         <!-- /.container -->
-
     </div>
-
 <section id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <h2 class="section-heading">Come change the world with us!</h2>
         <br>
-        <%= button_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg ", :method => :get%>
+        <%= link_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg ", :method => :get%>
         <br>
-        <hr>
-        <p>Seriously, we like you. Send us an email and we will get back to you within 24 hours.</p>
+        <br>
+        <h2>Seriously, we like you. Send us an email and we will get back to you within 24 hours.</h2>
       </div>
       <div class="col-lg-8 col-lg-offset-2 text-center">
-          <p><a href="mailto:your-email@your-domain.com">contactmissionfreshair@gmail.com</a></p>
+          <h2><a href="mailto:your-email@your-domain.com">contactmissionfreshair@gmail.com</a></h2>
       </div>
     </div>
   </div>

@@ -44,7 +44,7 @@
     <% if flash[:error] %>
       <div class="error"><%= flash[:error] %></div>
     <% end %>
-    <hr>
+  
       <div class="row">
           <div class="title row text-center">
             <div class="col-sm-12">
@@ -113,17 +113,14 @@
               <%= text_field_tag :card_verification, nil, class: "form-control", type:"number", "data-stripe" => "cvc", placeholder: 'CVC', autofocus: true, required: true %>
             </div>
           </div>
-       <br>
-  <div class="text-center">
-    <%= f.submit "Send Me Fresh Air", class: "btn btn-primary", id: "book-btn", type: "submit" do %>            
-    <% end %>
-  </div>
-<% end %>
+        <br>
+      <div class="text-center">
+        <%= f.submit "Send Me Fresh Air", class: "btn btn-primary", id: "book-btn", type: "submit" do %>  
+        <% end %>
+        <br>
+        <br>          
       </div>
-     <!--  <div class="col-sm-6 text-center mason-photo">
-        Air 
-        <img src="http://ace.imageg.net/graphics/product_images/pACE3-957285enh-z8.jpg" height="400" width="400">
-      </div> -->
+  <% end %>
       </div>
-    
+    </div>
  </div>
