@@ -37,6 +37,10 @@ gem 'bcrypt', '~> 3.1.7'
 #rspec tests
 gem 'rspec'
 
+gem 'groupdate', '~> 2.4.0'
+
+gem 'chartkick', '~> 1.4.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
