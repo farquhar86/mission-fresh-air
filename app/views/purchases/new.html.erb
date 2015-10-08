@@ -15,84 +15,115 @@
       <script>
         Stripe.setPublishableKey('pk_test_JchvLjqLiR0hMZxCoimb9NzC');
       </script>
- <div class="container">     
-    
+<!-- 
+<div class="container">  
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="row">
+        first name
+      </div>
+    </div>
+    <div class="col-sm-4">
+      Picture
+    </div>
+  </div>
+ </div> -->
+
+
+ <div class="container img-responsive">
+    <div class="row img-responsive">
+       <div class="text-center img-responsive">
+         <h2>This Alaskan air will arrive to your door step for only $20 plus $2 shipping. </h2>
+         <img src="http://ace.imageg.net/graphics/product_images/pACE3-957285enh-z8.jpg" height="400" width="400" class"img-responsive" align="middle">
+       </div> 
+    </div>   
+    <div class="text-center"> 
+      <h2>Proceeds go to local clean air initiatives. </h2>
+    </div> 
+    <hr> 
+    <% if flash[:error] %>
+      <div class="error"><%= flash[:error] %></div>
+    <% end %>
+    <hr>
+      <div class="row">
           <div class="title row text-center">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
               <h2>Where should we ship?</h2>
             </div>
           </div>
-
-        <div class="jumbotron">
-
-          <div class="row">
-            <div class="col-sm-8">
+          <div class="col-sm-12">
+            <div class="col-sm-12 payments">
+            <div class="row">
                 <%= f.text_field :first_name, class: "form-control", placeholder: 'First Name', autofocus: true, required: true %>
             </div>
-          </div>
           <div class="row">
-            <div class="col-sm-8">
+            
                 <%= f.text_field :last_name, class: "form-control", placeholder: 'Last Name', autofocus: true, required: true %>
-            </div>
           </div>
           <div class="row">
-            <div class="col-sm-8">
+            
                 <%= f.email_field :email, "data-stripe" => "email", class: "form-control", placeholder: 'Email', autofocus: true, required: true %>
-            </div>
+            
           </div>
           <div class="row">
-            <div class="col-sm-8">
-              <%= f.phone_field :telephone, class: "form-control", placeholder: 'Phone', autofocus: true, required: true %>
-            </div>
+            
+              <%= f.telephone_field :telephone, type:"number", class: "form-control", placeholder: 'Phone', autofocus: true, required: true %>
+           
           </div>
           <div class="row">
-            <div class="col-sm-8">
-              <%= f.text_field :address, "data-stripe" => "address_line", class: "form-control", placeholder: 'Address 1', autofocus: true, required: true %>
+            
+              <%= f.text_field :address, "data-stripe" => "address_line", class: "form-control", placeholder: 'Address', autofocus: true, required: true %>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-5">
               <%= f.text_field :city, "data-stripe" => "address_city", class: "form-control", placeholder: 'City', autofocus: true, required: true %>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-7">
               <%= f.text_field :state, "data-stripe" => "address_state", class: "form-control", placeholder: 'State/Province', autofocus: true, required: true %>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-3">
-              <%= f.text_field :zip, "data-stripe" => "address_zip", class: "form-control", placeholder: 'Zip Code', autofocus: true, required: true %>
-            </div>
             <div class="col-sm-5">
+              <%= f.text_field :zip, "data-stripe" => "address_zip", type:"number", class: "form-control", placeholder: 'Zip Code', autofocus: true, required: true %>
+            </div>
+            <div class="col-sm-7">
               <%= f.text_field :country, "data-stripe" => "address_country", class: "form-control", placeholder: 'Country', autofocus: true, required: true %>
             </div>
           </div>
       <!-- Billing -->
-        <br>
-        
+          <div class="title row text-center">
+            <div class="col-sm-12">
+              <h2>Card Info</h2>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-sm-8">
-            <%= text_field_tag :card_number, nil, :maxlength => 16, class: "form-control", "data-stripe" => "number", placeholder: '16 digit card number', autofocus: true, required: true %>
+            <div class="col-sm-12">
+            <%= text_field_tag :card_number, nil, :maxlength => 16, type:"number", class: "form-control", "data-stripe" => "number", placeholder: '16 digit card number', autofocus: true, required: true %>
            </div>
          </div>
          <div class="row">
-           <div class="col-sm-3">
+           <div class="col-sm-5">
             <%= select_tag :exp_month, options_for_select(Date::MONTHNAMES.compact.each_with_index.map { |name,i| ["#{i+1} - #{name}", i+1] }), include_blank: false, "data-stripe" => "exp-month", class: "form-control left", autofocus: true, required: true %>
            </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <%= select_tag :exp_year, options_for_select((Date.today.year..(Date.today.year+10)).to_a), include_blank: false, "data-stripe" => "exp-year", class: "form-control", autofocus: true, required: true %>
             </div>
-            <div class="col-sm-2">
-              <%= text_field_tag :card_verification, nil, class: "form-control", "data-stripe" => "cvc", placeholder: 'CVC', autofocus: true, required: true %>
+            <div class="col-sm-3">
+              <%= text_field_tag :card_verification, nil, class: "form-control", type:"number", "data-stripe" => "cvc", placeholder: 'CVC', autofocus: true, required: true %>
             </div>
           </div>
        <br>
-
-        
   <div class="text-center">
-    <%= f.submit "Send Me Fresh Air", class: "btn btn-primary", id: "book-btn", type: "submit" do %>
-              
+    <%= f.submit "Send Me Fresh Air", class: "btn btn-primary", id: "book-btn", type: "submit" do %>            
     <% end %>
   </div>
 <% end %>
+      </div>
+     <!--  <div class="col-sm-6 text-center mason-photo">
+        Air 
+        <img src="http://ace.imageg.net/graphics/product_images/pACE3-957285enh-z8.jpg" height="400" width="400">
+      </div> -->
+      </div>
+    
  </div>
-</div>

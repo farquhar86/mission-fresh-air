@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :superuserslugs
   root to: "welcome#index"
 
   get 'purchases/new', to: "purchases#new"
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
 
   post "/sign_out", to: "sessions#destroy" 
+
+  patch "/purchases", to: "purchases#edit"
 
   resources :charges
 

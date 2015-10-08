@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007003111) do
+ActiveRecord::Schema.define(version: 20151007013307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20151007003111) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "purchases", force: :cascade do |t|
     t.string   "email"
@@ -32,6 +45,8 @@ ActiveRecord::Schema.define(version: 20151007003111) do
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "card_token"
+    t.string   "telephone"
     t.string   "street"
     t.string   "city"
     t.string   "state"
@@ -40,8 +55,7 @@ ActiveRecord::Schema.define(version: 20151007003111) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "address"
-    t.string   "telephone"
-    t.string   "card_token"
+    t.string   "uuid"
     t.datetime "shipped"
   end
 
@@ -50,6 +64,7 @@ ActiveRecord::Schema.define(version: 20151007003111) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "slug"
   end
 
 end

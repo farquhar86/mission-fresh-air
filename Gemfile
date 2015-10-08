@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 #manages important keys for payments
 gem "figaro"
+gem 'friendly_id', '~> 5.1.0'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
