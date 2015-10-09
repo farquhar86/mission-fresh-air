@@ -1,98 +1,55 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Hay Welcom To Our Dashboard!</h1>
+            <h1 class="page-header">Welcome To Our Dashboard!</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-xs-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-comments fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="panel panel-primary custom-panel">
+                <div class="panel-heading"> 
+                    <div class="row"> 
+                        <div class="col-xs-12 text-right">
                             <div id="numberReceivers" class="huge"></div>
                             <div>All Orders <%= @purchases.length %></div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
                     <div class="panel-footer">
-                        <span class="pull-left"><%= line_chart Purchase.group_by_day(:created_at).count %></span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
+                        
+                        <div class="table-responsive">
+                            <span class="pull-left"><%= line_chart Purchase.group_by_day(:created_at).count, id: "chart" %></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
-                </a>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-xs-6">
+     
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-tasks fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div id="numberDonors" class="huge"></div>
-                            <div>Orders to ship</div>
+                       
+                        <div class="col-xs-12 text-right">
+                            <div>States we have shipped</div>
                         </div>
                     </div>
                 </div>
                 <a href="#">
                     <div class="panel-footer">
-                        <span class="pull-left">View Details</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
+                        <div class="table-responsive">
+                            <span class="pull-left"><%= pie_chart Purchase.group(:state).count, id: "pieChart"%></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-xs-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-shopping-cart fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div>what to put here?</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left"><%= pie_chart Purchase.group(:state).count %></span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-xs-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-support fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div>What here?</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left">View Details</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        
     </div>
     <!-- /.row -->
     <div class="row">

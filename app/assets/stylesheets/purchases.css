@@ -1,0 +1,21 @@
+body {
+	background-color: blue;
+}
+
+.btn-group>.btn:first-child {
+    margin-left: 0;
+    position: initial;
+}
+
+#chart {
+	height: 100%;
+	min-width: 500px;
+	overflow: hidden;
+}
+
+#pieChart{
+	height: 100%;
+	min-width: 500px;
+	overflow: hidden;
+}
+
