@@ -1,35 +1,17 @@
 <header class="background">
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                  
-                    <li>
-                      <%= link_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg button" %>
-                        
-                    </li>
-                    
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+                      <%= link_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg top-right-button"%>          
   <div class="container">
- 
-  
     <div class="row">
-      <div class="col-lg-8 col-lg-7">
-        <h1 id="home">Alaskan<br>Air Delevered</h1><br>
+      <div class="col-lg-12">
+        <h1 id="home">Alaskan<br>Air Delivered</h1><br>
         <!-- <p>Our mission is to bring pure Alaskan air to everyone on this beautiful Earth. Let's show the world what fresh air should taste like!<br><br>A portion of all proceeds go to support grassroots community programs that are cleaning our air.<br><br> -->
       </div>
     </div>
     <div class="arrow text-center">&#x25BE;</div>
   </div>
+  <br>
+  <br>
 </header>
     <div class="content-section-b">
         <div class="container">
@@ -37,102 +19,78 @@
                 <div class="col-sm-12 text-center" >
 
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Mission Fresh Air</h2>
-                    <p class="lead"> Its our mission to send people across the United States that never tasted fresh air before a mason jar full of fresh Alaskan air. We do this to raise money for local clean air initiatives.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="" alt="">
+                    <h2 class="section-heading">Our Mission</h2>
+                    <p class="lead">It is our mission to show people across the United States what fresh air should really taste like. To accomplish this, we are delivering fresh Alaskan air in mason jars to people's doorsteps. The goal of selling Alaskan air is to raise money for local clean air initiatives.</p>
                 </div>
             </div>
-
         </div>
         <!-- /.container -->
 
     </div>
-
-<section id="pitch">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-        <div class="videoWrapper align="middle>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/Dcr_ZDVbBSQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="no-padding" id="portfolio">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="col-lg-4 col-sm-6">
-        <a href="http://www.lung.org/" class="portfolio-box">
-          <img src="http://i.imgur.com/Fe3NGy0.jpg?1" class="img-responsive" alt="">
-          <div class="portfolio-box-caption">
-            <div class="portfolio-box-caption-content">
-              <div class="project-name">
-                American Lung Association
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    <div class="col-lg-4 col-sm-6">
-      <a href="http://www.ccair.org/" class="portfolio-box">
-        <img src="http://i.imgur.com/Zx1NI7p.jpg?2" class="img-responsive" alt="">
-        <div class="portfolio-box-caption">
-          <div class="portfolio-box-caption-content">
-            <div class="project-name">
-              Coalition for Clean Air
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-lg-4 col-sm-6">
-      <a href="http://medicaladvocatesforhealthyair.org/" class="portfolio-box">
-          <img src="http://i.imgur.com/rZ1W5KH.jpg?1" class="img-responsive" alt="">
-          <div class="portfolio-box-caption">
-            <div class="portfolio-box-caption-content">
-              <div class="project-name">
-                Medical Advocates for Healthy Air
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-    
+</div>
+<div class="video-container">
+<div onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'">
+  <img src="assets/movie_cover.png" class="movie-cover" style="cursor:pointer" />
+</div>
+<div id="thevideo" style="display: none;">
+  <object width="1040" height="585" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="https://www.youtube.com/embed/Dcr_ZDVbBSQ?autoplay=1" /><param name="allowfullscreen" value="true" /><embed width="1040" height="585" type="application/x-shockwave-flash" src="https://www.youtube.com/v/Dcr_ZDVbBSQ?version=3&amp;hl=en_US&amp;autoplay=1" allowFullScreen="true" allowscriptaccess="always" allowfullscreen="true" class="" /></object></div>
+</div>
+ 
     <div class="content-section-b">
-
         <div class="container">
-
-            <div class="row">
-
-                <div class="col-sm-12 text-center" >
-                    
+              <div class="row">
+                <div class="col-sm-12 text-center" >      
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Our Partners</h2>
                     <br>
-                      <img id="myImage" src="http://www.lung.org/images/ala-logo-head.png" height="100" width="250">
-                    <img src="http://conferences.stagedrightevents.com/blueskyluncheon/wp-content/uploads/2014/01/CCA-logo-4c-hi-res.jpg" height="100" width="250">
-                    <img src="https://quenchnj.com/app/uploads/2014/07/Medical-Advocates-for-Healthy-Air.png" height="100" width="250">
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="" alt="">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <a href="http://www.lung.org/" class="portfolio-box">
+                              <img src="http://i.imgur.com/Fe3NGy0.jpg?1" class="img-responsive" alt="">
+                              <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                  <div class="project-name">
+                                    <img src="https://quenchnj.com/app/uploads/2014/07/Medical-Advocates-for-Healthy-Air.png" height="100" width="250">
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        <div class="col-sm-4">
+                          <a href="http://www.ccair.org/" class="portfolio-box">
+                            <img src="http://i.imgur.com/Zx1NI7p.jpg?2" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                              <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                  <img src="http://conferences.stagedrightevents.com/blueskyluncheon/wp-content/uploads/2014/01/CCA-logo-4c-hi-res.jpg" height="100" width="250">
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-sm-4">
+                          <a href="http://medicaladvocatesforhealthyair.org/" class="portfolio-box">
+                              <img src="http://i.imgur.com/rZ1W5KH.jpg?1" class="img-responsive" alt="">
+                              <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                  <div class="project-name">
+                                    <img id="myImage" src="http://www.lung.org/images/ala-logo-head.png" height="100" width="250">
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-    </div>
 <section id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center">
+      <div class="col-lg-12 text-center">
         <h2 class="section-heading">Come change the world with us!</h2>
         <br>
         <%= link_to "Claim Your Jar", purchases_new_path, class: "btn btn-default btn-lg ", :method => :get%>
@@ -140,9 +98,10 @@
         <br>
         <h2>Seriously, we like you. Send us an email and we will get back to you within 24 hours.</h2>
       </div>
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2><a href="mailto:your-email@your-domain.com">contactmissionfreshair@gmail.com</a></h2>
+      <div class="col-lg-12 text-center email">
+          <a href="mailto:your-email@your-domain.com"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJCr8uwSoeHpUnV26SGL5733bFCY3irCPj1sFmC0zAtB6dO97OAw" height= "50" width="50" style="text-decoration:none"></a>
       </div>
     </div>
   </div>
+
 </section>

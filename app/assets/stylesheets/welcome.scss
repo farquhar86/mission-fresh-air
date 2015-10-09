@@ -1,18 +1,24 @@
 header {
-  padding-top: 70px;
   color: white;
 }
 
 .background {
   background: url(https://41.media.tumblr.com/4a440186c56ca84abbadf13499a78146/tumblr_ntbyqi9QTL1symplco1_1280.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.movie-cover {
+  width: 100%;
+  height: 100%;
 }
 
 h1#home {
   font-size: 100px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  padding: 45px 0px 0px 0px;
+  padding: 145px 0px 0px 0px;
+  font-size: 14.9vw; 
 }
 
 h1#checkout {
@@ -23,7 +29,7 @@ h1#checkout {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 35px;
   font-family: "Raleway";
   font-weight: 300;
 }
@@ -47,23 +53,29 @@ hr {
 
 section {
     padding: 100px 0;
-}
-
-a {
-  color: black;
-}
+} 
 
 button {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 60px;
   
 }
-
-section#pitch {
-  padding: 50px;
+.top-right-button {
+  
+  color: #19b5fe;
+ 
+  margin: 10px 10px;
+  position:absolute;
+   top:0;
+   right:0;
 }
 
+.email {
+  font-size: 3.9vw; 
+  font-family: "Raleway";
+  padding-top: 30px;
+}
 section#contact {
   padding: 50px;
 }
@@ -75,7 +87,7 @@ iframe {
 
 .arrow {
   text-align: center;
-  font-size: 150px;
+  font-size: 14.9vw; 
 }
 
 .white {
@@ -102,49 +114,29 @@ iframe {
     text-align: center;
     color: white;
     opacity: 0;
-    background: #67809F;
+    background: white;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
+    position: relative;
     top: 50%;
     width: 100%;
     text-align: center;
     transform: translateY(-50%);
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
-}
 
 .portfolio-box:hover .portfolio-box-caption {
     opacity: 1;
 }
 
-@media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
-    }
 
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
-    }
-}
+
 .no-gutter > [class*=col-] {
     padding-right: 0;
     padding-left: 0;
@@ -176,13 +168,29 @@ iframe {
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
   height: 0;
 }
-.videoWrapper iframe {
+.videoWrapper object {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  
+}
+
+.video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
