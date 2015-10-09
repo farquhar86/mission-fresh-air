@@ -8,6 +8,8 @@ Our product aims to address this issue by providing users with a “breath of fr
 
 Currently we have the partners and processes in place to capture and ship fresh Alaskan air. However, unless we are able to buy and ship in bulk, the costs are prohibitively high. Through Kickstarter, we hope to raise the funds necessary to buy and ship the commemorative mason jars of fresh Alaskan air to the contiguous United States.
 
+https://www.missionfreshair.com
+
 ## WHAT DID WE DO
 
 * Worked with a group in a shared GitHub repository.
@@ -30,3 +32,17 @@ Currently we have the partners and processes in place to capture and ship fresh 
 * **AJAX** Uses AJAX to communicate with the server without reloading the page.
 * **External APIs** Uses Stripe API to allow users to purchase from or donate to our site.
 * **Emails** Uses ActionMailer to send users email updates!
+
+## FUTURE DEVELOPMENT
+
+* **Admin** Each admin gets a weekly email showing how many jars have been sold that week.
+* **Twilio** User gets a text when they have bought a jar of air, when their jar has shipped, and when it has been delivered.
+* **Partners** Partner with more organizations to clean up the world's air.
+* **Expand** We will soon ship to other countries.
+
+## CONTRIBUTORS
+
+* **Sakina Sheikh** https://github.com/sakinasheikh
+* **Marcel Degas** https://github.com/marceltheshell
+* **Bradley Farquhar** https://github.com/farquhar86
+* **Keala Lusk** https://github.com/contactkeala
