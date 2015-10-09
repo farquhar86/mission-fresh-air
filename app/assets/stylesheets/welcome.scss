@@ -14,11 +14,10 @@ header {
 }
 
 h1#home {
-  font-size: 100px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   padding: 145px 0px 0px 0px;
-  font-size: 14.9vw; 
+  font-size: 10.6vw; 
 }
 
 h1#checkout {
@@ -44,6 +43,11 @@ a:hover {
   text-decoration: none;
 }
 
+.arrow {
+  text-align: center;
+  font-size: 150px;
+}
+
 hr {
     max-width: 50px;
     border-color: #67809F;
@@ -59,16 +63,26 @@ button {
   position: absolute;
   top: 30px;
   right: 60px;
-  
 }
+
+.image {
+  display: inline-block;
+  margin: 20px 20px;
+}
+
+#hello {
+    border-radius: 50%;
+      height: 145px;
+
+}
+
 .top-right-button {
-  
+  display: inline-block;
   color: #19b5fe;
- 
   margin: 10px 10px;
   position:absolute;
-   top:0;
-   right:0;
+  top:0;
+  right:0;
 }
 
 .email {
@@ -83,11 +97,6 @@ section#contact {
 iframe {
   height: 480px;
   width: 800px;
-}
-
-.arrow {
-  text-align: center;
-  font-size: 14.9vw; 
 }
 
 .white {

@@ -32,6 +32,7 @@ https://www.missionfreshair.com
 * **AJAX** Uses AJAX to communicate with the server without reloading the page.
 * **External APIs** Uses Stripe API to allow users to purchase from or donate to our site.
 * **Emails** Uses ActionMailer to send users email updates!
+* **User Stories** https://trello.com/b/hNzNmM0I/world-changers
 
 ## FUTURE DEVELOPMENT
 
