@@ -18,7 +18,7 @@ h1#home {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   padding: 145px 0px 0px 0px;
-  font-size: 14.9vw; 
+  font-size: 12.9vw; 
 }
 
 h1#checkout {
@@ -55,20 +55,15 @@ section {
     padding: 100px 0;
 } 
 
-button {
-  position: absolute;
-  top: 30px;
-  right: 60px;
+// button {
+//   position: absolute;
+//   top: 30px;
+//   right: 60px;
   
-}
+// }
 .top-right-button {
   
-  color: #19b5fe;
- 
-  margin: 10px 10px;
-  position:absolute;
-   top:0;
-   right:0;
+
 }
 
 .email {
