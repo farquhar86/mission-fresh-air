@@ -1,13 +1,11 @@
 class PurchasesController < ApplicationController
-  
-  before_action :require_login, only: [:index]
+
+  before_action :require_login, except: [:new, :create]
+  before_action :find_purchase, only: [:show, :update]
 
   def index
-    
-    @superuser = Superuser.find(1)
-    @purchases = Purchase.all.order(created_at: :desc)
-    @shippedOut = Purchase.all.order(shipped: :desc)
-
+    unshipped_purchases
+    shipped_purchases
   end
 
   def new
@@ -15,10 +13,9 @@ class PurchasesController < ApplicationController
   end
 
   def create
-    @purchase = Purchase.new new_purchase_params
+    make_new_purchase_from_params
     charge_card
     @purchase.save
-
     redirect_to @purchase
 
   rescue Stripe::CardError => e
@@ -27,22 +24,24 @@ class PurchasesController < ApplicationController
   end
 
   def show
-    @purchase = Purchase.find(params[:id])
   end
 
   def update
-    purchase = Purchase.find(params[:id])
-    purchase.update_attribute(:shipped, DateTime.now)
+    find_purchase.add_ship_date
     redirect_to "/purchases"
   end
- 
+
  private
+
+    def find_purchase
+      @purchase = Purchase.find(params[:id])
+    end
 
     def to_param
      uuid
     end
 
-  	def purchase_params  
+  	def purchase_params
       params.require(:purchase).permit(:first_name, :last_name, :address, :city, :state, :country, :zip, :telephone, :email, :card_token)
     end
 
@@ -61,6 +60,18 @@ class PurchasesController < ApplicationController
         currency: 'usd',
         source: params[:purchase][:card_token]
       )
+    end
+
+    def make_new_purchase_from_params
+      @purchase = Purchase.new new_purchase_params
+    end
+
+    def unshipped_purchases
+      @purchases = Purchase.all.order(created_at: :desc)
+    end
+
+    def shipped_purchases
+      @shippedOut = Purchase.all.order(shipped: :desc)
     end
 
 end
